@@ -14,6 +14,11 @@
 		500895CA20739651000FABBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 500895C920739651000FABBC /* Assets.xcassets */; };
 		500895CD20739651000FABBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 500895CB20739651000FABBC /* LaunchScreen.storyboard */; };
 		500895D520766885000FABBC /* MyUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500895D420766885000FABBC /* MyUtils.swift */; };
+		500895DC20790726000FABBC /* win.wav in Resources */ = {isa = PBXBuildFile; fileRef = 500895D720790725000FABBC /* win.wav */; };
+		500895DD20790726000FABBC /* lose.wav in Resources */ = {isa = PBXBuildFile; fileRef = 500895D820790725000FABBC /* lose.wav */; };
+		500895DE20790726000FABBC /* hitCat.wav in Resources */ = {isa = PBXBuildFile; fileRef = 500895D920790725000FABBC /* hitCat.wav */; };
+		500895DF20790726000FABBC /* hitCatLady.wav in Resources */ = {isa = PBXBuildFile; fileRef = 500895DA20790725000FABBC /* hitCatLady.wav */; };
+		500895E020790726000FABBC /* backgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 500895DB20790725000FABBC /* backgroundMusic.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,11 @@
 		500895CC20739651000FABBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		500895CE20739651000FABBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		500895D420766885000FABBC /* MyUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyUtils.swift; sourceTree = "<group>"; };
+		500895D720790725000FABBC /* win.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = win.wav; sourceTree = "<group>"; };
+		500895D820790725000FABBC /* lose.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = lose.wav; sourceTree = "<group>"; };
+		500895D920790725000FABBC /* hitCat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hitCat.wav; sourceTree = "<group>"; };
+		500895DA20790725000FABBC /* hitCatLady.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hitCatLady.wav; sourceTree = "<group>"; };
+		500895DB20790725000FABBC /* backgroundMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = backgroundMusic.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,8 +76,21 @@
 				500895CB20739651000FABBC /* LaunchScreen.storyboard */,
 				500895CE20739651000FABBC /* Info.plist */,
 				500895D420766885000FABBC /* MyUtils.swift */,
+				500895D620790725000FABBC /* Sounds */,
 			);
 			path = ZombieConga;
+			sourceTree = "<group>";
+		};
+		500895D620790725000FABBC /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				500895D720790725000FABBC /* win.wav */,
+				500895D820790725000FABBC /* lose.wav */,
+				500895D920790725000FABBC /* hitCat.wav */,
+				500895DA20790725000FABBC /* hitCatLady.wav */,
+				500895DB20790725000FABBC /* backgroundMusic.mp3 */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,8 +152,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				500895DD20790726000FABBC /* lose.wav in Resources */,
 				500895C820739651000FABBC /* Main.storyboard in Resources */,
+				500895E020790726000FABBC /* backgroundMusic.mp3 in Resources */,
+				500895DC20790726000FABBC /* win.wav in Resources */,
+				500895DE20790726000FABBC /* hitCat.wav in Resources */,
 				500895CA20739651000FABBC /* Assets.xcassets in Resources */,
+				500895DF20790726000FABBC /* hitCatLady.wav in Resources */,
 				500895CD20739651000FABBC /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
