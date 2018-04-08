@@ -19,6 +19,8 @@ class GameScene: SKScene {
     var lastTouchLocation: CGPoint?
     let zombieRotateRadiansPerSec: CGFloat = 4.0 * π
     let zombieAnimation: SKAction
+    var invincible = false
+    let catMovePointsPerSec:CGFloat = 480.0
     
     let catCollisionSound: SKAction = SKAction.playSoundFileNamed("hitCat.wav", waitForCompletion: false)
     let enemyCollisionSound: SKAction = SKAction.playSoundFileNamed("hitCatLady.wav", waitForCompletion: false)
@@ -98,6 +100,7 @@ class GameScene: SKScene {
         }
         
         boundsCheckZombie()
+        moveTrain()
     }
     
     override func didEvaluateActions() {
@@ -235,12 +238,33 @@ class GameScene: SKScene {
     }
     
     func zombieHit(cat: SKSpriteNode) {
-        cat.removeFromParent()
+        cat.name = "train"
+        cat.removeAllActions()
+        cat.setScale(1.0)
+        cat.zRotation = 0
+        
+        let turnGreen = SKAction.colorize(with: SKColor.green, colorBlendFactor: 1.0, duration: 0.2)
+        cat.run(turnGreen)
+        
         run(catCollisionSound)
     }
     
     func zombieHit(enemy: SKSpriteNode) {
-        enemy.removeFromParent()
+        invincible = true
+        let blinkTimes = 10.0
+        let duration = 3.0
+        let blinkAction = SKAction.customAction(withDuration: duration) { node, elapsedTime in
+            let slice = duration / blinkTimes
+            let remainder = Double(elapsedTime).truncatingRemainder(
+                dividingBy: slice)
+            node.isHidden = remainder > slice / 2
+        }
+        let setHidden = SKAction.run() { [weak self] in
+            self?.zombie.isHidden = false
+            self?.invincible = false
+        }
+        zombie.run(SKAction.sequence([blinkAction, setHidden]))
+        
         run(enemyCollisionSound)
     }
     
@@ -267,6 +291,24 @@ class GameScene: SKScene {
         
         for enemy in hitEnemies {
             zombieHit(enemy: enemy)
+        }
+    }
+    
+    func moveTrain() {
+        var targetPosition = zombie.position
+        
+        enumerateChildNodes(withName: "train") { node, stop in
+            if !node.hasActions() {
+                let actionDuration = 0.3
+                let offset = targetPosition - node.position
+                let direction = offset.normalized()
+                let amountToMovePerSec = direction * self.catMovePointsPerSec
+                let amountToMove = amountToMovePerSec * CGFloat(actionDuration)
+                let moveAction = SKAction.moveBy(x: amountToMove.x, y: amountToMove.y, duration: actionDuration)
+                node.run(moveAction)
+            }
+            
+            targetPosition = node.position
         }
     }
 }
