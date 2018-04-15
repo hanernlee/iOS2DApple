@@ -20,6 +20,8 @@
 		500895DF20790726000FABBC /* hitCatLady.wav in Resources */ = {isa = PBXBuildFile; fileRef = 500895DA20790725000FABBC /* hitCatLady.wav */; };
 		500895E020790726000FABBC /* backgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 500895DB20790725000FABBC /* backgroundMusic.mp3 */; };
 		500895E2207A225F000FABBC /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500895E1207A225F000FABBC /* GameOverScene.swift */; };
+		50449A1920837B2A00A391B3 /* GLIMSTIC.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 50449A1820837B2A00A391B3 /* GLIMSTIC.TTF */; };
+		50BB7D3F20834C94008AA14F /* MainMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BB7D3E20834C94008AA14F /* MainMenuScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		500895DA20790725000FABBC /* hitCatLady.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hitCatLady.wav; sourceTree = "<group>"; };
 		500895DB20790725000FABBC /* backgroundMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = backgroundMusic.mp3; sourceTree = "<group>"; };
 		500895E1207A225F000FABBC /* GameOverScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
+		50449A1820837B2A00A391B3 /* GLIMSTIC.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = GLIMSTIC.TTF; sourceTree = "<group>"; };
+		50BB7D3E20834C94008AA14F /* MainMenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,8 +74,10 @@
 		500895BB20739650000FABBC /* ZombieConga */ = {
 			isa = PBXGroup;
 			children = (
+				50449A1820837B2A00A391B3 /* GLIMSTIC.TTF */,
 				500895BC20739651000FABBC /* AppDelegate.swift */,
 				500895C220739651000FABBC /* GameScene.swift */,
+				50BB7D3E20834C94008AA14F /* MainMenuScene.swift */,
 				500895E1207A225F000FABBC /* GameOverScene.swift */,
 				500895C420739651000FABBC /* GameViewController.swift */,
 				500895C620739651000FABBC /* Main.storyboard */,
@@ -123,7 +129,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Christopher Lee";
 				TargetAttributes = {
 					500895B820739650000FABBC = {
@@ -155,6 +161,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50449A1920837B2A00A391B3 /* GLIMSTIC.TTF in Resources */,
 				500895DD20790726000FABBC /* lose.wav in Resources */,
 				500895C820739651000FABBC /* Main.storyboard in Resources */,
 				500895E020790726000FABBC /* backgroundMusic.mp3 in Resources */,
@@ -173,6 +180,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50BB7D3F20834C94008AA14F /* MainMenuScene.swift in Sources */,
 				500895E2207A225F000FABBC /* GameOverScene.swift in Sources */,
 				500895C320739651000FABBC /* GameScene.swift in Sources */,
 				500895C520739651000FABBC /* GameViewController.swift in Sources */,
@@ -217,6 +225,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -224,6 +233,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -251,7 +261,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -274,6 +284,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -281,6 +292,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -302,7 +314,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
