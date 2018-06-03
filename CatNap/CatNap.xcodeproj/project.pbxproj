@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5033B88B20C3F67100BDEF3A /* mrreow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5033B88620C3F67100BDEF3A /* mrreow.mp3 */; };
+		5033B88C20C3F67100BDEF3A /* pop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5033B88720C3F67100BDEF3A /* pop.mp3 */; };
+		5033B88D20C3F67100BDEF3A /* win.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5033B88820C3F67100BDEF3A /* win.mp3 */; };
+		5033B88E20C3F67100BDEF3A /* lose.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5033B88920C3F67100BDEF3A /* lose.mp3 */; };
+		5033B88F20C3F67100BDEF3A /* backgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5033B88A20C3F67100BDEF3A /* backgroundMusic.mp3 */; };
+		5033B89120C3F79900BDEF3A /* CatCurl.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5033B89020C3F79900BDEF3A /* CatCurl.sks */; };
+		5033B89320C3F91600BDEF3A /* CatWakeUp.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5033B89220C3F91600BDEF3A /* CatWakeUp.sks */; };
 		50D357D4208381D4003DD7E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D357D3208381D4003DD7E5 /* AppDelegate.swift */; };
 		50D357D6208381D4003DD7E5 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 50D357D5208381D4003DD7E5 /* GameScene.sks */; };
 		50D357D8208381D4003DD7E5 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 50D357D7208381D4003DD7E5 /* Actions.sks */; };
@@ -19,6 +26,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5033B88620C3F67100BDEF3A /* mrreow.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mrreow.mp3; sourceTree = "<group>"; };
+		5033B88720C3F67100BDEF3A /* pop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pop.mp3; sourceTree = "<group>"; };
+		5033B88820C3F67100BDEF3A /* win.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = win.mp3; sourceTree = "<group>"; };
+		5033B88920C3F67100BDEF3A /* lose.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lose.mp3; sourceTree = "<group>"; };
+		5033B88A20C3F67100BDEF3A /* backgroundMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = backgroundMusic.mp3; sourceTree = "<group>"; };
+		5033B89020C3F79900BDEF3A /* CatCurl.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = CatCurl.sks; sourceTree = "<group>"; };
+		5033B89220C3F91600BDEF3A /* CatWakeUp.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = CatWakeUp.sks; sourceTree = "<group>"; };
 		50D357D0208381D4003DD7E5 /* CatNap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatNap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50D357D3208381D4003DD7E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50D357D5208381D4003DD7E5 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -43,6 +57,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5033B88520C3F67100BDEF3A /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				5033B88620C3F67100BDEF3A /* mrreow.mp3 */,
+				5033B88720C3F67100BDEF3A /* pop.mp3 */,
+				5033B88820C3F67100BDEF3A /* win.mp3 */,
+				5033B88920C3F67100BDEF3A /* lose.mp3 */,
+				5033B88A20C3F67100BDEF3A /* backgroundMusic.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		50D357C7208381D4003DD7E5 = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +95,7 @@
 				50D357DB208381D4003DD7E5 /* GameViewController.swift */,
 				50D357DD208381D4003DD7E5 /* Main.storyboard */,
 				50D357E0208381D8003DD7E5 /* Assets.xcassets */,
+				5033B88520C3F67100BDEF3A /* Sounds */,
 				50D357E2208381D8003DD7E5 /* LaunchScreen.storyboard */,
 				50D357E5208381D8003DD7E5 /* Info.plist */,
 			);
@@ -80,6 +107,8 @@
 			children = (
 				50D357D5208381D4003DD7E5 /* GameScene.sks */,
 				50D357EE20838E0F003DD7E5 /* Cat.sks */,
+				5033B89020C3F79900BDEF3A /* CatCurl.sks */,
+				5033B89220C3F91600BDEF3A /* CatWakeUp.sks */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -142,10 +171,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5033B88F20C3F67100BDEF3A /* backgroundMusic.mp3 in Resources */,
+				5033B88D20C3F67100BDEF3A /* win.mp3 in Resources */,
+				5033B88E20C3F67100BDEF3A /* lose.mp3 in Resources */,
 				50D357EF20838E0F003DD7E5 /* Cat.sks in Resources */,
+				5033B89320C3F91600BDEF3A /* CatWakeUp.sks in Resources */,
+				5033B89120C3F79900BDEF3A /* CatCurl.sks in Resources */,
 				50D357DF208381D4003DD7E5 /* Main.storyboard in Resources */,
 				50D357D6208381D4003DD7E5 /* GameScene.sks in Resources */,
 				50D357E1208381D8003DD7E5 /* Assets.xcassets in Resources */,
+				5033B88C20C3F67100BDEF3A /* pop.mp3 in Resources */,
+				5033B88B20C3F67100BDEF3A /* mrreow.mp3 in Resources */,
 				50D357E4208381D8003DD7E5 /* LaunchScreen.storyboard in Resources */,
 				50D357D8208381D4003DD7E5 /* Actions.sks in Resources */,
 			);
