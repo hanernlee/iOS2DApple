@@ -49,6 +49,16 @@ class MessageNode: SKLabelNode {
     physicsBody = SKPhysicsBody(circleOfRadius: 10)
     physicsBody!.collisionBitMask = PhysicsCategory.Edge
     physicsBody!.categoryBitMask = PhysicsCategory.Label
+    physicsBody!.contactTestBitMask = PhysicsCategory.Edge
     physicsBody!.restitution = 0.7
+  }
+  
+  private var numberOfBounces: Int = 0
+  
+  func didBounce() {
+    numberOfBounces += 1
+    if numberOfBounces >= 4 {
+      self.removeFromParent()
+    }
   }
 }
