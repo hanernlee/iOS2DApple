@@ -82,6 +82,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
       .playBackgroundMusic("backgroundMusic.mp3")
   }
   
+  override func didSimulatePhysics() {
+    if playable {
+      if abs(catNode.parent!.zRotation) > CGFloat(25).degreesToRadians() {
+        lose()
+      }
+    }
+  }
+  
   func didBegin(_ contact: SKPhysicsContact) {
     let collision = contact.bodyA.categoryBitMask | contact.bodyB.categoryBitMask
     
