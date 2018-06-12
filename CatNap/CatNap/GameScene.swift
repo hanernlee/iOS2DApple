@@ -54,6 +54,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
   
   var playable = true
   
+  var currentLevel: Int = 0
+  
   override func didMove(to view: SKView) {
     // Calculate playable margin
     
@@ -90,6 +92,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
   }
   
+  class func level(levelNum: Int) -> GameScene {
+    let scene = GameScene(fileNamed: "Level\(levelNum)")!
+    scene.currentLevel = levelNum
+    scene.scaleMode = .aspectFill
+    return scene
+  }
+  
   func didBegin(_ contact: SKPhysicsContact) {
     let collision = contact.bodyA.categoryBitMask | contact.bodyB.categoryBitMask
     
@@ -123,9 +132,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
   }
   
   func newGame() {
-    let scene = GameScene(fileNamed:"GameScene")
-    scene!.scaleMode = scaleMode
-    view!.presentScene(scene)
+    view!.presentScene(GameScene.level(levelNum: currentLevel))
   }
   
   func lose() {
