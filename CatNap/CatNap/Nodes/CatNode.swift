@@ -30,14 +30,18 @@
 
 import SpriteKit
 
-class CatNode: SKSpriteNode, EventListenerNode {
+class CatNode: SKSpriteNode, EventListenerNode, InteractiveNode {
+  static let kCatTappedNotification = "kCatTappedNotification"
+  
   func didMoveToScene() {
     let catBodyTexture = SKTexture(imageNamed: "cat_body_outline")
     parent!.physicsBody = SKPhysicsBody(texture: catBodyTexture,
                                         size: catBodyTexture.size())
     parent!.physicsBody!.categoryBitMask = PhysicsCategory.Cat
-    parent!.physicsBody!.collisionBitMask = PhysicsCategory.Block | PhysicsCategory.Edge
+    parent!.physicsBody!.collisionBitMask = PhysicsCategory.Block | PhysicsCategory.Edge | PhysicsCategory.Spring
     parent!.physicsBody!.contactTestBitMask = PhysicsCategory.Bed | PhysicsCategory.Edge
+    
+    isUserInteractionEnabled = true
   }
   
   func wakeUp() {
@@ -75,5 +79,14 @@ class CatNode: SKSpriteNode, EventListenerNode {
       SKAction.move(to: localPoint, duration: 0.66),
       SKAction.rotate(toAngle: -parent!.zRotation, duration: 0.5)
       ]))
+  }
+  
+  func interact() {
+    NotificationCenter.default.post(Notification(name: NSNotification.Name(CatNode.kCatTappedNotification), object: nil))
+  }
+  
+  override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+    super.touchesEnded(touches, with: event)
+    interact()
   }
 }

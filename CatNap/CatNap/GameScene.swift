@@ -46,12 +46,14 @@ struct PhysicsCategory {
   static let Edge:  UInt32 = 0b1000 // 8
   static let Label: UInt32 = 0b10000 // 16
   static let Spring: UInt32 = 0b100000 // 32
+  static let Hook: UInt32 = 0b1000000 // 64
 }
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
   
   var bedNode: BedNode!
   var catNode: CatNode!
+  var hookBaseNode: HookBaseNode?
   
   var playable = true
   
@@ -83,10 +85,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     SKTAudio.sharedInstance()
       .playBackgroundMusic("backgroundMusic.mp3")
+    
+//    let rotationConstraint = SKConstraint.zRotation(
+//      SKRange(lowerLimit: -π/4, upperLimit: π/4)
+//    )
+//    catNode.parent!.constraints = [rotationConstraint]
+    
+    hookBaseNode = childNode(withName: "hookBase") as? HookBaseNode
   }
   
   override func didSimulatePhysics() {
-    if playable {
+    if playable && hookBaseNode?.isHooked != true {
       if abs(catNode.parent!.zRotation) > CGFloat(25).degreesToRadians() {
         lose()
       }
@@ -124,6 +133,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
       print("FAIL")
       lose()
     }
+    
+    if collision == PhysicsCategory.Cat | PhysicsCategory.Hook && hookBaseNode?.isHooked == false {
+      hookBaseNode!.hookCat(catPhysicsBody: catNode.parent!.physicsBody!)
+    }
   }
   
   func inGameMessage(text: String) {
@@ -137,6 +150,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
   }
   
   func lose() {
+    if currentLevel  > 1 {
+      currentLevel -= 1
+    }
+    
     playable = false
     
     //1
@@ -153,6 +170,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
   }
   
   func win() {
+    if currentLevel < 3 {
+      currentLevel += 1
+    }
+    
     playable = false
     
     SKTAudio.sharedInstance().pauseBackgroundMusic()
