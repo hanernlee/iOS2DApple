@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5001090520D66B96000CC0F9 /* SpringNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5001090420D66B96000CC0F9 /* SpringNode.swift */; };
 		5049D72E20D4AB0700AE7F56 /* Level2.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5049D72D20D4AB0700AE7F56 /* Level2.sks */; };
 		9C2C79A61F1297ED0035CC86 /* BlockNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2C79A51F1297ED0035CC86 /* BlockNode.swift */; };
 		9C2C79A81F1299360035CC86 /* MessageNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2C79A71F1299360035CC86 /* MessageNode.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5001090420D66B96000CC0F9 /* SpringNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpringNode.swift; sourceTree = "<group>"; };
 		5049D72D20D4AB0700AE7F56 /* Level2.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level2.sks; sourceTree = "<group>"; };
 		9C2C79A51F1297ED0035CC86 /* BlockNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockNode.swift; sourceTree = "<group>"; };
 		9C2C79A71F1299360035CC86 /* MessageNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageNode.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				9CD5007E1F1262030000AF8F /* CatNode.swift */,
 				9C2C79A51F1297ED0035CC86 /* BlockNode.swift */,
 				9C2C79A71F1299360035CC86 /* MessageNode.swift */,
+				5001090420D66B96000CC0F9 /* SpringNode.swift */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				9CD500AC1F1265520000AF8F /* SKColor+Extensions.swift in Sources */,
 				9CD500A81F1265520000AF8F /* CGVector+Extensions.swift in Sources */,
 				9C48AB6D1F1213BE008A5AD0 /* GameViewController.swift in Sources */,
+				5001090520D66B96000CC0F9 /* SpringNode.swift in Sources */,
 				9CD500AE1F1265520000AF8F /* SKTAudio.swift in Sources */,
 				9CD500A61F1265520000AF8F /* CGFloat+Extensions.swift in Sources */,
 				9C48AB651F1213BE008A5AD0 /* AppDelegate.swift in Sources */,
